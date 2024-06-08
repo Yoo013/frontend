@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AOS from "aos"
 import "aos/dist/aos.css"
-import Signup from "./components/SIgnup"
+import Signup from "./components/Signup"
 import Login from "./components/Login"
 
 import App2 from "./App2"
