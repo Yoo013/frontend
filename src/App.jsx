@@ -1,13 +1,14 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AOS from "aos"
 import "aos/dist/aos.css"
-import Signup from "./components/Signup"
 import Login from "./components/Login"
 
 import App2 from "./App2"
 import ForgotPassword from "./components/ForgotPassword"
 import App3 from "./App3"
+import axios from "axios"
+import Signup from "./components/SIgnup"
 
 
 
@@ -17,6 +18,21 @@ function App() {
 		AOS.init()
 		AOS.refresh()
 	}, [])
+
+	const [user, setUser] = useState();
+	useEffect(() => {
+		axios.put('https://apiai-apii.vercel.app/kelas/updated')
+		headers: {
+			Authorization: `Berear ${localStorage.getItem('token')}`
+		}
+	})
+	.then(res => {
+		if(res.data.success) {
+			setUser(res.data.user)
+		}
+	}).catch(err => {
+		console.log(err)
+	})
 
 	return (
 		<>
