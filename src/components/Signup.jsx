@@ -16,7 +16,7 @@ const Signup = () => {
     Axios.defaults.withCredentials = false;
     const handleSubmit = (e) => {
 e.preventDefault()
- Axios.post("https://apiai-apii.vercel.app/auth/signup", {
+ Axios.post("auth/signup", {
   username, 
  email, 
  password,
