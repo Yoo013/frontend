@@ -15,7 +15,7 @@ const Signup = () => {
     const navigate = useNavigate()
     const handleSubmit = (e) => {
 e.preventDefault()
- Axios.post("http://localhost/3000/signup", {
+ Axios.post("http://localhost/3000/auth/signup", {
   username, 
  email, 
  password,
