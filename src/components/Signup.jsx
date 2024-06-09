@@ -13,10 +13,9 @@ const Signup = () => {
     const [password, setPassword] = useState("")
 
     const navigate = useNavigate()
-    Axios.defaults.withCredentials = false;
     const handleSubmit = (e) => {
 e.preventDefault()
- Axios.post("https://apiai-apii.vercel.app", process.env.ROUTES_SIGNUP, {
+ Axios.post("http://localhost/3000", {
   username, 
  email, 
  password,
