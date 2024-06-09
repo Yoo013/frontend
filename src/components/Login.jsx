@@ -17,7 +17,7 @@ const Login = () => {
 
     const handleSubmit = (e) => {
 e.preventDefault()
- Axios.post("http://localhost:3000", {
+ Axios.post("http://localhost:3000/login", {
  email, 
  password,
     }).then(response => {
